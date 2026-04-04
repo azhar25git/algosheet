@@ -279,11 +279,12 @@
             transform: translateY(-2px);
         }
 
+        /* Ensures the header items are vertically centered and aligned */
         .card-head {
-            padding: 12px 14px 8px;
+            padding: 14px 20px 10px; /* Matched horizontal padding */
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             border-bottom: 1px solid var(--border);
         }
 
@@ -306,8 +307,9 @@
             white-space: nowrap;
         }
 
+        /* Ensures the note above the code aligns with the code start */
         .card-note {
-            padding: 8px 14px;
+            padding: 10px 20px 6px; /* Matched horizontal padding to code block */
             font-size: 0.78rem;
             color: var(--muted);
             font-weight: 400;
@@ -315,18 +317,21 @@
         }
 
         .card-code {
-            padding: 16px;
-            /* Slightly more internal padding */
+            padding: 16px 20px;
             font-family: var(--font-mono);
             font-size: 0.82rem;
-            /* Slightly larger for better legibility */
             line-height: 1.6;
             color: #c8d0f0;
             background: rgba(0, 0, 0, 0.35);
-            /* Darkened slightly for higher contrast */
             border-top: 1px solid rgba(255, 255, 255, 0.04);
-            white-space: pre;
-            /* Keeps formatting; larger columns handle the width */
+            
+            /* Strict Alignment Fixes */
+            white-space: pre;           /* Maintains your exact spacing/indentation */
+            tab-size: 4;               /* Ensures tabs align to 4 spaces consistently */
+            -moz-tab-size: 4;
+            font-variant-ligatures: none; /* Prevents symbols from changing character width */
+            text-rendering: optimizeLegibility;
+            
             overflow-x: auto;
             position: relative;
             border-radius: 0 0 12px 12px;
