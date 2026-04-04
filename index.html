@@ -15,18 +15,15 @@
             --surface2: #1a1a26;
             --border: #2a2a40;
             --accent: #00d4ff;
-            /* Cyber Blue */
             --accent2: #ff007a;
-            /* Electric Magenta */
             --accent3: #00ffa3;
-            /* Phosphor Teal */
             --text: #e8e8f0;
             --muted: #888899;
             --py: #3d7aed;
             --js: #f0c040;
             --java: #e05a2b;
             --php: #8892bf;
-            /* Font Variables for easy global updates */
+            
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
         }
@@ -46,8 +43,7 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-
-        /* Animated background */
+        
         body::before {
             content: '';
             position: fixed;
@@ -166,8 +162,7 @@
             height: calc(100vh - 57px);
             overflow: hidden;
         }
-
-        /* Sidebar */
+        
         .sidebar {
             width: 230px;
             flex-shrink: 0;
@@ -213,13 +208,11 @@
             background: rgba(0, 212, 255, 0.1);
             font-weight: 600;
         }
-
-        /* Content */
+       
         .content {
             flex: 1;
             overflow-y: auto;
             padding: 32px;
-            /* Increased padding for a more spacious, "pro" feel */
         }
 
         .content::-webkit-scrollbar {
@@ -248,7 +241,6 @@
 
         .cards-grid {
             display: grid;
-            /* Increased min-width from 340px to 500px to accommodate longer code lines */
             grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
             gap: 20px;
         }
@@ -279,10 +271,8 @@
             transform: translateY(-2px);
         }
 
-        /* Ensures the header items are vertically centered and aligned */
         .card-head {
             padding: 14px 20px 10px;
-            /* Matched horizontal padding */
             display: flex;
             align-items: center;
             gap: 12px;
@@ -307,11 +297,9 @@
             border: 1px solid rgba(0, 212, 255, 0.2);
             white-space: nowrap;
         }
-
-        /* Ensures the note above the code aligns with the code start */
+ 
         .card-note {
             padding: 10px 20px 6px;
-            /* Matched horizontal padding to code block */
             font-size: 0.78rem;
             color: var(--muted);
             font-weight: 400;
@@ -327,14 +315,10 @@
             background: rgba(0, 0, 0, 0.35);
             border-top: 1px solid rgba(255, 255, 255, 0.04);
 
-            /* Strict Alignment Fixes */
             white-space: pre;
-            /* Maintains your exact spacing/indentation */
             tab-size: 4;
-            /* Ensures tabs align to 4 spaces consistently */
             -moz-tab-size: 4;
             font-variant-ligatures: none;
-            /* Prevents symbols from changing character width */
             text-rendering: optimizeLegibility;
 
             overflow-x: auto;
@@ -387,7 +371,6 @@
             text-align: center;
         }
 
-        /* Syntax highlight colors */
         .kw {
             color: #c792ea;
             font-weight: 600;
@@ -416,7 +399,6 @@
 
         @media (max-width: 1100px) {
             .cards-grid {
-                /* On mid-sized screens, drop to a single column to prevent squishing */
                 grid-template-columns: 1fr;
             }
         }
