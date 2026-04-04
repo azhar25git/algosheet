@@ -3020,6 +3020,26 @@ document.getElementById('searchInput').addEventListener('input', e => {
   }, 200);
 });
 
+const menuToggle = document.getElementById('menuToggle');
+const sidebar = document.getElementById('sidebar');
+
+if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', () => {
+        // Toggle the visual animation
+        menuToggle.classList.toggle('is-active');
+        // Toggle the actual sidebar
+        sidebar.classList.toggle('active');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove('active');
+            menuToggle.classList.remove('is-active');
+        }
+    });
+}
+
 // Init
 buildSidebar();
 renderCards();
