@@ -3040,6 +3040,16 @@ if (menuToggle && sidebar) {
     });
 }
 
+function adjustMobileNav() {
+  const header = document.querySelector('header');
+  const sidebar = document.querySelector('.sidebar');
+  const headerHeight = header.offsetHeight;
+
+  sidebar.style.top = `${headerHeight}px`;
+}
+window.addEventListener('load', adjustMobileNav);
+window.addEventListener('resize', adjustMobileNav);
+
 // Init
 buildSidebar();
 renderCards();
